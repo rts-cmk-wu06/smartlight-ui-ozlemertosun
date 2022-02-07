@@ -4,3 +4,34 @@
   height: 812px;
 }
 
+/* HEADINGS */
+
+/* Page title style */
+.TitleStyle{
+  font-size: 30px;
+  line-height: 35px;
+  color: #FFFFFF;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+/* Page subtitle style */
+.SubTitleStyle{
+  font-size: 19px;
+  font-weight: bold;
+  color: #002D67;
+}
+
+/* Control panel Title style */
+.ButtonTitleStyle{
+  font-size: 19px;
+  font-weight: bold;
+}
+
+/* Control panel SubTitle style */
+.ButtonSubTitleStyle {
+  font-size: 13px;
+  color: #FFA939;
+  font-weight: bold;
+}
+
