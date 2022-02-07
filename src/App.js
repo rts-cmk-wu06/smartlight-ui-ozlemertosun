@@ -1,5 +1,4 @@
-
-
+import CpBackground from './assets/components/CpBackground';
 import Header from './assets/components/Header';
 import './styles/App.css';
 import './styles/index.css'
