@@ -19,4 +19,10 @@ code {
     monospace;
 }
 
+/* gradient for scenes */
+@layer components {
+	.customGradient {
+		@apply bg-gradient-to-tr from-[#ec9d59] to-[#b53d8d];
+	}
+}
 
