@@ -1,13 +1,17 @@
-import PhoneInfo from "../assets/components/PhoneInfo";
 
-import backArrow from "../assets/img/backArrow.svg"
-import lightbulb from "../assets/img/lightbulb.svg"
+
+import SettingsBg from "../assets/components/SettingsBg";
+import SettingsHeader from "../assets/components/SettingsHeader";
+
+
 
 const SettingsPage = () => {
     return ( 
         <div className="App">
                 
-        
+        <SettingsHeader />
+        <SettingsBg />
+
         </div>
 
      );
