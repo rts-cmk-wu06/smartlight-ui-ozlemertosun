@@ -40,3 +40,21 @@
   font-weight: bold;
 }
 
+/*GRADIENT FOR SCENES*/ 
+
+.gradientBirthday{
+  background: rgb(255, 155, 155);
+  background: linear-gradient(54deg,rgba(255, 155, 155, 1) 14%, rgba(255,188,145,1) 100%);
+}
+.gradientParty{
+  background: rgb(166, 147, 235);
+  background: linear-gradient(54deg,rgba(166,147,235,1) 14%, rgba(218,147,235,1) 100%);
+}
+.gradientRelax{
+  background: rgb(147, 202, 235);
+  background: linear-gradient(54deg,rgba(147,202,235,1) 14%, rgba(147,221,235,1) 100%);
+}
+.gradientFun{
+  background: rgb(137, 221, 148);
+  background: linear-gradient(54deg,rgba(137,221,148,1) 14%, rgba(191,236,146,1) 100%);
+}

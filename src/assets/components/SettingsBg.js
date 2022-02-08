@@ -1,5 +1,6 @@
 import ColorBtns from "./ColorBtns";
 import IntensitySlider from "./IntensitySlider";
+import Scenes from "./Scenes";
 
 const SettingsBg = () => {
     return ( 
@@ -8,7 +9,7 @@ const SettingsBg = () => {
             <IntensitySlider />
             <ColorBtns />
             
-            <h2 className="SubTitleStyle pt-[29px]">Scenes</h2>  
+            <Scenes />
             
         </div>
      );
