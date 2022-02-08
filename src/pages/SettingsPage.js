@@ -1,5 +1,6 @@
 
 
+import PhoneInfo from "../assets/components/PhoneInfo";
 import SettingsBg from "../assets/components/SettingsBg";
 import SettingsHeader from "../assets/components/SettingsHeader";
 
@@ -8,10 +9,11 @@ import SettingsHeader from "../assets/components/SettingsHeader";
 const SettingsPage = () => {
     return ( 
         <div className="App">
-                
+        <div className="relative">
+        <PhoneInfo />       
         <SettingsHeader />
         <SettingsBg />
-
+        </div>
         </div>
 
      );
