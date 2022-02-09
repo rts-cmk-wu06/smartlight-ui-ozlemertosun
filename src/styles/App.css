@@ -1,9 +1,10 @@
 .App {
   background-color: #0A4DA2;
-  width: 375px;
+  width: 100vw; 
   height: 812px;
   position: relative;
-  
+ /*  position: sticky;
+  overflow: hidden; */
 }
 
 .CustomPadding{
