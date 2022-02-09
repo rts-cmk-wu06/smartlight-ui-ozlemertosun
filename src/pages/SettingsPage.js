@@ -3,6 +3,7 @@
 import PhoneInfo from "../assets/components/PhoneInfo";
 import SettingsBg from "../assets/components/SettingsBg";
 import SettingsHeader from "../assets/components/SettingsHeader";
+import Navigation from "../assets/components/Navigation";
 
 
 
@@ -13,6 +14,7 @@ const SettingsPage = () => {
         <PhoneInfo />       
         <SettingsHeader />
         <SettingsBg />
+        <Navigation />
         </div>
         </div>
 

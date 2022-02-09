@@ -12,9 +12,9 @@ const PhoneInfo = () => {
             </div>
             
             <div className="flex gap-[5px]">
-                <img src={connection}/>
-                <img src={wifi}/>
-                <img src={battery}/>
+                <img src={connection} alt="logo"/>
+                <img src={wifi}  alt="logo"/>
+                <img src={battery}  alt="logo"/>
             </div>
         </div>
      );
