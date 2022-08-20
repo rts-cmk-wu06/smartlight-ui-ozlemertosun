@@ -9,7 +9,7 @@ import Navigation from "./assets/components/Navigation";
 function App() {
   return (
     <div className="App relative">
-      {/*       <motion.div
+      <motion.div
         initial={{ rotate: 360 }}
         animate={{ rotate: 0 }}
         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
@@ -18,7 +18,7 @@ function App() {
         <div className=" absolute h-[194px] w-[194px] rounded-full bg-[#FFFFFF05]"></div>
         <div className=" absolute left-48 top-20 h-[194px] w-[194px] rounded-full bg-[#FFFFFF05]"></div>
         <div className=" absolute top-52 left-4 h-[194px] w-[194px] rounded-full bg-[#FFFFFF05]"></div>
-      </motion.div> */}
+      </motion.div>
 
       <Routes>
         <Route path="/" element={<CpHome />} />
