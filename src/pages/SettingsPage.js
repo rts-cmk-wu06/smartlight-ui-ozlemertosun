@@ -1,24 +1,15 @@
-
-
-import PhoneInfo from "../assets/components/PhoneInfo";
 import SettingsBg from "../assets/components/SettingsBg";
 import SettingsHeader from "../assets/components/SettingsHeader";
-import Navigation from "../assets/components/Navigation";
-
-
+import LightSelection from "../assets/components/LightSelection";
 
 const SettingsPage = () => {
-    return ( 
-        <div className="App">
-        <div className="relative">
-        <PhoneInfo />       
-        <SettingsHeader />
-        <SettingsBg />
-        <Navigation />
-        </div>
-        </div>
+  return (
+    <>
+      <SettingsHeader />
+      <LightSelection />
+      <SettingsBg />
+    </>
+  );
+};
 
-     );
-}
- 
 export default SettingsPage;

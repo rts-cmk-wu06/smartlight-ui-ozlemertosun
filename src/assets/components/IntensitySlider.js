@@ -1,83 +1,90 @@
-import Slider from 'react-input-slider';
-import React, { useState } from 'react';
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
+import { useEffect, useMemo, useState } from "react";
+import { throttle } from "lodash";
+import "../../styles/slider.css";
+import { LightBulbOnIcon, LightBulbOffIcon } from "./Icons";
 
-import OffBulb from "../img/OffBulb.svg"
-import OnBulb from "../img/OnBulb.svg"
-
+const Mark = () => <div className="w-[1px] h-1 bg-gray-400"></div>;
 
 const IntensitySlider = () => {
+  const [brightness, setBrightness] = useState(50);
 
-    const [state, setState] = useState({ x: 0, y: 0 });
+  useEffect(() => {
+    fetch(process.env.REACT_APP_IP_ADRESS, {
+      method: "PUT",
+      body: JSON.stringify({
+        bri: brightness,
+      }),
+    });
+  }, [brightness]);
 
-    return (<div>
-    
-    <h2 className="SubTitleStyle pt-[29px] pb-[21px]">Intensity</h2>  
-    
-    <div className='flex'>
-    
+  useEffect(() => {
+    fetch(process.env.REACT_APP_IP_ADRESS, {
+      method: "PUT",
+      body: JSON.stringify({
+        xy: [0.3227, 0.329],
+      }),
+    });
+  }, []);
+
+  const changeBri = (value) => {
+    setBrightness(value);
+    console.log(value);
+  };
+
+  const _ = require("lodash");
+  const useThrottle = useMemo(() => throttle(changeBri, 110), []);
+
+  return (
+    <div>
+      <h2 className="SubTitleStyle pt-[29px] pb-[21px]">Intensity</h2>
+
+      <div className="flex items-end">
         {/* OFFBULB */}
-        <div className='h-[24px] w-[17px]'>
-            <img src={OffBulb} alt="bulb" />
+        <div>
+          <LightBulbOffIcon />
         </div>
-    
-    <div className='px-[10px]'>
-    
-    <Slider
-    
-    axis="x"
-    
-    x={state.x}
-    
-    onChange={({ x }) => setState(state => ({ ...state, x }))}
-    
-    styles={{
-    
-    track: {
-    
-    backgroundColor: 'lightgray',
-    
-    width: 258,
-    
-    height: 1
-    
-    },
-    
-    active: {
-    
-    backgroundColor: 'lightgray'
-    
-    },
-    
-    thumb: {
-    
-    width: 12,
-    
-    height: 12
-    
-    },
-    
-    disabled: {
-    
-    opacity: 0.5
-    
-    }
-    
-    }}
-    
-    />
-    
+
+        <div className="px-[15px] w-full">
+          <Slider
+            handleStyle={{
+              background: "white",
+              borderColor: "transparent",
+              boxShadow: "0px 0px 4px #568BD012",
+            }}
+            railStyle={{
+              background: "lightgray",
+              height: "2px",
+            }}
+            trackStyle={{
+              background: "#FFD339",
+              height: "2px",
+            }}
+            min={1}
+            max={254}
+            step={Math.floor(254 / 5)}
+            defaultValue={brightness}
+            onChange={useThrottle}
+          />
+
+          <div className="flex justify-between mt-1">
+            <Mark />
+            <Mark />
+            <Mark />
+            <Mark />
+            <Mark />
+            <Mark />
+          </div>
         </div>
-        
-            {/* ONBULB */}
-            <div className='h-[24px] w-[17px]'>
-                <img src={OnBulb} alt="bulb" />
-            </div>
-        
+
+        {/* ONBULB */}
+        <div>
+          <LightBulbOnIcon />
         </div>
-    
+      </div>
     </div>
-    );
-    
-    };
- 
+  );
+};
+
 export default IntensitySlider;
