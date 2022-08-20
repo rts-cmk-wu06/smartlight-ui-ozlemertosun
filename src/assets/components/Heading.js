@@ -1,10 +1,11 @@
 const Heading = () => {
-    return ( 
+  return (
     <div className="pt-[68px]">
-        <h1 className="TitleStyle">Control</h1>
-        <h1 className="TitleStyle">Panel</h1>
+      <h1 className="TitleStyle">
+        <span className="">Control</span>Panel
+      </h1>
     </div>
-     );
-}
- 
+  );
+};
+
 export default Heading;
